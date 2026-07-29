@@ -1,0 +1,111 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table thead {
+  background: #F8FAFC;
+  border-bottom: 1px solid #E5E9F2;
+}
+
+.table th {
+  padding: 16px 24px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.primaryCell {
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.clickableRow {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.clickableRow:hover {
+  background: #F8FAFC;
+}
+
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: #64748B;
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.emptyTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.emptySubtitle {
+  font-size: 13px;
+  color: #64748B;
+  max-width: 320px;
+}
+
+.skeletonCell {
+  height: 18px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.statusPill {
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.tableResponsiveWrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

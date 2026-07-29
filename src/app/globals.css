@@ -1,0 +1,124 @@
+:root {
+  /* Colors – Primary: Royal Blue #1E3A8A */
+  --brand-blue: #1E3A8A;
+  --brand-blue-hover: #243A85;
+  --brand-blue-light: #3B82F6;
+  --sidebar-navy: #1E3A8A;
+  --sidebar-navy-hover: #2B4DA6;
+  
+  --background: #F8F9FA;
+  --surface: #FFFFFF;
+  --border: #E2E8F0;
+  --input-border: #E5E9F2;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --text-on-dark: #FFFFFF;
+  
+  --success: #22C55E;
+  --error: #EF4444;
+  
+  /* Layout */
+  --sidebar-width: 260px;
+  --nav-height: 70px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, p, figure {
+  margin: 0;
+}
+
+mark,
+[style*="background-color: yellow"],
+[style*="background-color:yellow"],
+[style*="background-color: #ff0"],
+[style*="background-color:#ff0"],
+[style*="background: yellow"],
+[style*="background:yellow"] {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: inherit !important;
+}
+
+::selection {
+  background-color: #3B82F6 !important;
+  color: #ffffff !important;
+}
+
+::-moz-selection {
+  background-color: #3B82F6 !important;
+  color: #ffffff !important;
+}
+
+/* Base utility classes for buttons */
+.btn-primary {
+  background-color: var(--brand-blue);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  border: 1px solid var(--brand-blue);
+  color: var(--brand-blue);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: var(--brand-blue);
+  color: #fff;
+}

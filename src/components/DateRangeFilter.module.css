@@ -1,0 +1,102 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #E5E9F2;
+  background: white;
+  font-size: 13px;
+  color: #475569;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.trigger:hover {
+  border-color: #94A3B8;
+}
+
+.triggerActive {
+  border-color: #3B82F6;
+  color: #1E3A8A;
+  background: #EFF6FF;
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 60;
+  background: white;
+  border: 1px solid #E5E9F2;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.presetBtn {
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: 1px solid #E5E9F2;
+  background: #F8FAFC;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+}
+
+.presetBtn:hover {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #1E3A8A;
+}
+
+.customRange {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 12px;
+}
+
+.customLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+.dateInput {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #E5E9F2;
+  font-size: 13px;
+  color: #0F172A;
+}
+
+.clearBtn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #EF4444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}

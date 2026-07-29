@@ -1,0 +1,247 @@
+/* ===== Split-Screen Auth Layout ===== */
+.authContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* --- LEFT PANEL: Gradient Banner --- */
+.authBanner {
+  flex: 0 0 48%;
+  background: linear-gradient(160deg, #1E3A8A 0%, #2B4DA6 40%, #3B6BD6 75%, #6BA3F7 100%);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 48px;
+}
+
+/* Decorative floating orbs */
+.authBanner::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.authBanner::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -60px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  z-index: 10;
+  letter-spacing: -0.5px;
+}
+
+/* Banner Text Section */
+.bannerContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  max-width: 440px;
+}
+
+.bannerHeadline {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.bannerDescription {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+/* Dashboard Preview Card (glassmorphism) */
+.dashboardPreview {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 24px;
+  z-index: 10;
+}
+
+.previewHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.previewDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.previewDot:nth-child(1) { background: #EF4444; }
+.previewDot:nth-child(2) { background: #F59E0B; }
+.previewDot:nth-child(3) { background: #22C55E; }
+
+.previewStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.previewStat {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.previewStatValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.previewStatLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.previewChart {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 60px;
+}
+
+.chartBar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.chartBar:nth-child(1) { height: 40%; }
+.chartBar:nth-child(2) { height: 65%; }
+.chartBar:nth-child(3) { height: 45%; }
+.chartBar:nth-child(4) { height: 80%; }
+.chartBar:nth-child(5) { height: 55%; }
+.chartBar:nth-child(6) { height: 90%; background: rgba(255, 255, 255, 0.4); }
+.chartBar:nth-child(7) { height: 70%; }
+.chartBar:nth-child(8) { height: 50%; }
+
+/* --- RIGHT PANEL: Auth Content --- */
+.authContent {
+  flex: 1;
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 56px;
+  overflow-y: auto;
+}
+
+.topRightAction {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.formWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Wide form wrapper for pricing page */
+.formWrapperWide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+  background: #ffffff;
+  padding: 48px 64px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Full-width wrapper for onboarding */
+.formWrapperFull {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  background: #ffffff;
+  padding: 48px 64px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Container for full-page routes like pricing, payment, onboarding */
+.fullPageContainer {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #F8FAFC; /* A light, premium background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .authBanner {
+    flex: 0 0 42%;
+    padding: 36px;
+  }
+  .bannerHeadline {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .authContainer {
+    flex-direction: column;
+  }
+  .authBanner {
+    display: none;
+  }
+  .authContent {
+    padding: 32px 24px;
+  }
+}
